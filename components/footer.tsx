@@ -105,7 +105,7 @@ export default function Footer() {
           </div>
         </div>
         {/* Bottom Bar */}
-        <div className="border-t border-[#3d3d3d]">
+        <div className="border-t border-[#3d3d3d] bg-[#3d3d3d]">
           <div className="container mx-auto flex flex-col items-center justify-between px-6 py-4 text-sm text-[#3d3d3d] md:flex-row">
             <div className="mb-2 flex space-x-4 md:mb-0">
               <Link href="#" className="text-white">
