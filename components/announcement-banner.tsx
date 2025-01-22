@@ -1,6 +1,7 @@
 'use client'
 
 import * as React from 'react'
+import Marquee from 'react-fast-marquee'
 import { cn } from '@/libs/ui'
 
 const announcements = [
@@ -18,20 +19,22 @@ export function AnnouncementBanner() {
   return (
     <div
       className={
-        'overflow-hidden whitespace-nowrap bg-black px-6 py-1 text-sm text-white'
+        'overflow-hidden whitespace-nowrap bg-black py-1 text-sm text-white'
       }
     >
-      {announcements.map((announcement, index) => (
-        <span
-          key={announcement.id}
-          className={cn(index === announcements.length - 1 && 'pr-8')}
-        >
-          {announcement.text}
-          {index !== announcements.length - 1 && (
-            <span className="mx-4">•</span>
-          )}
-        </span>
-      ))}
+      <Marquee>
+        {announcements.map((announcement, index) => (
+          <span
+            key={announcement.id}
+            className={cn(index === announcements.length - 1 && 'pr-8')}
+          >
+            {announcement.text}
+            {index !== announcements.length - 1 && (
+              <span className="mx-4">•</span>
+            )}
+          </span>
+        ))}
+      </Marquee>
     </div>
   )
 }

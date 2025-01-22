@@ -49,15 +49,15 @@ export default function Community() {
   const contactMethod = form.watch('contactMethod')
 
   return (
-    <div className="grid min-h-screen bg-[#FFD700]">
+    <div className="grid min-h-screen bg-[#FFD700] p-6">
       <div className="flex items-center justify-center">
-        <div className="flex flex-col gap-12 p-6 md:flex-row">
+        <div className="flex flex-col gap-20 p-6 md:flex-row">
           <Image
             src="/images/community.jpeg"
             alt="People shopping"
             width={400}
             height={400}
-            className="rounded-3xl object-cover"
+            className="h-[550] w-[550] rounded-3xl object-cover"
             priority
           />
           <div className="max-w-md space-y-6">
@@ -89,7 +89,7 @@ export default function Community() {
                         <Input
                           placeholder="Enter your name"
                           {...field}
-                          className="bg-white"
+                          className="rounded-3xl bg-white"
                         />
                       </FormControl>
                       <FormMessage />
@@ -142,7 +142,7 @@ export default function Community() {
                           }
                           type={contactMethod === 'email' ? 'email' : 'tel'}
                           {...field}
-                          className="bg-white"
+                          className="rounded-3xl bg-white"
                         />
                       </FormControl>
                       <FormMessage />
@@ -182,7 +182,10 @@ export default function Community() {
                     </FormItem>
                   )}
                 />
-                <Button type="submit" className="w-full bg-black text-white">
+                <Button
+                  type="submit"
+                  className="w-full rounded-3xl bg-black text-white"
+                >
                   Join now
                 </Button>
               </form>
